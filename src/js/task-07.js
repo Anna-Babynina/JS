@@ -8,6 +8,6 @@ const input = document.querySelector(`#front-size-control`)
 console.log(input)
 console.log(textSpan.textContent)
 
-input.addEventListener(`change`, () => {
-        textSpan.getElementsByClassName.fontSize = input.value + "px";
+textSpan.addEventListener(`input`, (event) => {
+        input.getElementsByClassName.fontSize = textSpan.value + "px";
     });
