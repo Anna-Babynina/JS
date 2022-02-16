@@ -23,7 +23,7 @@ const newColor = getRandomHexColor()
 buttonEl.addEventListener('click', () => {
   bodyEl.style.backgroundColor = newColor;
   textColor.textContent = bodyEl.style.backgroundColor;
-})
+});
 console.log(bodyEl, buttonEl, textColor)
 console.log(newColor)
 

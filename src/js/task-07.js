@@ -3,11 +3,12 @@
 // В результате при перетаскивании ползунка будет меняться размер текста.
 
 
-const textSpan = document.querySelector(`#text`)
-const input = document.querySelector(`#front-size-control`)
-console.log(input)
-console.log(textSpan.textContent)
 
-textSpan.addEventListener(`input`, (event) => {
-        input.getElementsByClassName.fontSize = textSpan.value + "px";
-    });
+const inputRef = document.querySelector("#font-size-control");
+const textRef = document.querySelector("#text");
+
+const handleInput = () => {
+  textRef.style.fontSize = `${inputRef.value}px`;
+};
+
+inputRef.addEventListener("input", handleInput);

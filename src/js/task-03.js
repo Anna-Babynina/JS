@@ -23,26 +23,10 @@ const images = [
   },
   
 ];
-const galleryList = document.querySelector('.gallery');
-
-images.forEach(({url, alt}) => {
-  return galleryList.insertAdjacentHTML 
-  ('beforeend', `<li class='gallery-item'>,
-    <img class='gallery-image' src='${url}' alt='${alt}'>
-</li>`
-  )
-});
 
 
 
 
-
-
-
-// let arr = ['BMW', 'Mercedes', 'Volkswagen', 'Toyota'];
-// const carList = document.querySelector('.car-list');
-// let list = '';
-// arr.forEach(item => {
-//     list += `<li>${ item }</li>`
-// });
-// carList.innerHTML = list;
+for (let el of images)
+  document.querySelector('.gallery').insertAdjacentHTML
+  ('beforeEnd', `<li><img src="${el.url}" alt="${el.alt}"></li>`);

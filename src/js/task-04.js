@@ -12,6 +12,7 @@
 
 
 let counterValue = 0;
+   
 
 const onButtonDecrClick = event => {
     value.textContent = counterValue -= 1;
