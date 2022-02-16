@@ -10,26 +10,13 @@
 // Обновляй интерфейс новым значением переменной counterValue.
 
 
-
-let counterValue = 0;
-   
-
-const onButtonDecrClick = event => {
-    value.textContent = counterValue -= 1;
-
-};
-
-const onButtonIncrClick = event => {
-    value.textContent = counterValue += 1;
-
-};
-const counter = document.querySelector(`#counter`);
 const buttonDecr = document.querySelector(`button[data-action = "decrement"]`);
 const buttonIncr = document.querySelector(`button[data-action = "increment"]`);
+const counterValueDisplay = document.querySelector("#value");
+let counterValue = 0;
+buttonDecr.addEventListener(`click`,() => {
+    counterValue -= 1;
+    counterValueDisplay.textContent = counterValue;
+    return counterValue;
+});
 
-    buttonDecr.addEventListener(`click, onButtonDecrClick`);
-    buttonIncr.addEventListener(`click, onButtonIncrClick`);
-    
-const value = document.querySelector("#value");
-
-console.log(counterValue);
