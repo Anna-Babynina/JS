@@ -26,7 +26,8 @@ const images = [
 
 
 
-
+const imagesRef = document.querySelector('.gallery');
 for (let el of images)
-  document.querySelector('.gallery').insertAdjacentHTML
+ imagesRef.insertAdjacentHTML
   ('beforeEnd', `<li><img src="${el.url}" alt="${el.alt}"></li>`);
+console.log(imagesRef)
