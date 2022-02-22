@@ -12,24 +12,29 @@
 // Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
 
 
+// document.getElementById("validation-input").onblur = function () {
+//     console.log(this.value.includes);
+//     this.classList.add('invalid');
 
-
-document.getElementById("validation-input").onblur = function () {
-    console.log(this.value.length);
-    this.classList.add('invalid');
-const count = Number(`data-length`)
-    if (this.getAttribute(count) === this.value.length) {
-        this.classList.remove('invalid');
-        this.classList.add('valid');
+//     if (this.value.length(`6`)){ 
+//         this.classList.remove('invalid');
+//         this.classList.add('valid');
         
-    } else {
-        this.classList.remove('valid');
-        this.classList.add('invalid');
+//     } else{
+//         this.classList.remove('valid');
+//         this.classList.add('invalid');
        
        
-    };
+//     };
 
-};
+// };
+const inputRef = document.querySelector("validation-input");
+inputRef.onblur = function (){
+    this.classList.add('invalid'); 
+    
+    
+}
+
 
 
 
